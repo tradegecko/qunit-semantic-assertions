@@ -1,6 +1,6 @@
 {
   "name": "qunit-semantic-assertions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Semantic assertions for qunit, using same selectors as semantic-dom-selectors",
   "main": "index.js",
   "scripts": {
