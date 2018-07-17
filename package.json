@@ -19,10 +19,8 @@
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "rollup": "^0.61.2",
-    "rollup-plugin-babel": "^3.0.7"
+    "rollup-plugin-babel": "^3.0.7",
+    "semantic-dom-selectors": "^0.0.10"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "rollup-plugin-node-resolve": "^3.3.0"
-  }
+  "license": "MIT"
 }
