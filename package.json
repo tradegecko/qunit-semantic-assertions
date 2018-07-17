@@ -4,7 +4,9 @@
   "description": "Semantic assertions for qunit, using same selectors as semantic-dom-selectors",
   "main": "index.js",
   "scripts": {
-    "test": "yarn test"
+    "test": "yarn test",
+    "build": "rollup -c",
+    "prepublish": "rollup -c"
   },
   "keywords": [
     "qunit"
