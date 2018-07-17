@@ -13,7 +13,7 @@ export default {
   external: ['qunit', 'semantic-dom-selectors'],
 
   output: {
-    file: 'dist/qunit-dom.js',
+    file: 'dist/qunit-semantic-assertions.js',
     format: 'amd',
     amd: {
       id: 'qunit-semantic-assertions'
