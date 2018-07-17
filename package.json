@@ -1,0 +1,28 @@
+{
+  "name": "qunit-semantic-assertions",
+  "version": "0.0.1",
+  "description": "Semantic assertions for qunit, using same selectors as semantic-dom-selectors",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn test"
+  },
+  "keywords": [
+    "qunit"
+  ],
+  "author": {
+    "name": "billybonks",
+    "email": "sebastienstettler@gmail.com",
+    "website": "www.unearthing.io"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "rollup": "^0.61.2",
+    "rollup-plugin-babel": "^3.0.7"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "rollup-plugin-node-resolve": "^3.3.0"
+  }
+}
