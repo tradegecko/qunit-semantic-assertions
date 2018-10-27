@@ -3,3 +3,5 @@ node_js:
 - "node"
 before_install:
   - npm install broccoli
+install:
+  - npm run build
