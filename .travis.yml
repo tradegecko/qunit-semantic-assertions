@@ -2,6 +2,6 @@ language: node_js
 node_js:
 - "node"
 before_install:
-  - npm install broccoli
+  - npm install -g broccoli
 install:
   - npm run build
