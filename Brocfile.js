@@ -20,7 +20,7 @@ const rollup = new Rollup('.', {
     ],
 
     output: {
-      file: 'dist/qunit-semantic-assertions.js',
+      file: 'qunit-semantic-assertions.js',
       format: 'amd',
       amd: {
         id: 'qunit-semantic-assertions'
@@ -30,6 +30,8 @@ const rollup = new Rollup('.', {
   }
 });
 
-module.exports = concat(new MergeTrees([rollup, semanticDomSelectors]), {
-  outputFile: '/qunit-semantic-assertions.js'
+const combinedJsAssets =  concat(new MergeTrees([rollup, semanticDomSelectors]), {
+  outputFile: '/combined.js'
 });
+
+module.exports = MergeTrees([combinedJsAssets, rollup]);
