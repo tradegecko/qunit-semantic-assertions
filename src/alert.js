@@ -8,6 +8,6 @@ QUnit.extend(QUnit.assert, {
 });
 
 export default function button(label) {
-  let control = findObject(`[role='alert']`, label, 'alert');
+  const control = findObject(`[role='alert']`, label, 'alert');
   return buildAsserter(control, { label });
 }
