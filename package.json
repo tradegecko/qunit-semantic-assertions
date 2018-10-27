@@ -4,7 +4,7 @@
   "description": "Semantic assertions for qunit, using same selectors as semantic-dom-selectors",
   "main": "index.js",
   "scripts": {
-    "test": "yarn test",
+    "test": "jest",
     "build": "broccoli build dist --overwrite",
     "prepublish": "broccoli build dist --overwrite"
   },
@@ -28,9 +28,31 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "babel-jest": "^23.6.0",
     "broccoli": "^2.0.1",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^3.0.1",
-    "broccoli-rollup": "^2.1.1"
+    "broccoli-rollup": "^2.1.1",
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0",
+    "jest-runner-eslint": "^0.7.1"
+  },
+  "jest": {
+    "verbose": true,
+    "projects": [
+      {
+        "testURL": "http://localhost/",
+        "displayName": "test"
+      },
+      {
+        "displayName": "lint",
+        "runner": "jest-runner-eslint",
+        "testMatch": [
+          "<rootDir>/src/**/*.js"
+        ]
+      }
+    ]
   }
 }
