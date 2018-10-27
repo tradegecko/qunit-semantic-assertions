@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>QUnit Example</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.7.1.css">
+    <script src="https://code.jquery.com/qunit/qunit-2.7.1.js"></script>
+    <script src="https://unpkg.com/qunit-dom/dist/qunit-dom.js"></script>
+    <script>
+      window.QUnit = QUnit;
+      QUnit.config.autostart = false;
+    </script>
+    <script data-main="../dist/combined" src="./require.js"></script>
+</head>
+<body>
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<div id="testing-dom">
+    <button>Test Button</button>
+</div>
+<script>
+    require(['qunit-semantic-assertions'], function(QUnitAddSemanticAssertions) {
+        QUnit.start();
+        QUnitAddSemanticAssertions();
+
+        QUnit.test ("hello word", function (assert) {
+          assert.button('test button').exists();
+        });
+    });
+</script>
+</body>
+</html>
