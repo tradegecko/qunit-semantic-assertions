@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "lint": "eslint src/**/*.js",
     "build": "broccoli build dist --overwrite",
     "prepublish": "broccoli build dist --overwrite"
   },
@@ -36,6 +37,7 @@
     "eslint": "^5.8.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "husky": "^1.1.2",
     "jest": "^23.6.0",
     "jest-runner-eslint": "^0.7.1"
   },
@@ -54,5 +56,10 @@
         ]
       }
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
