@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "yarn test",
-    "build": "rollup -c",
-    "prepublish": "rollup -c"
+    "build": "broccoli build dist --overwrite",
+    "prepublish": "broccoli build dist --overwrite"
   },
   "keywords": [
     "qunit"
@@ -20,10 +20,17 @@
     "babel": "^6.23.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "broccoli-concat": "^3.7.3",
     "rollup": "^0.61.2",
     "rollup-plugin-babel": "^3.0.7",
     "rollup-plugin-node-resolve": "^3.4.0",
     "semantic-dom-selectors": "^0.0.10"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli": "^2.0.1",
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-merge-trees": "^3.0.1",
+    "broccoli-rollup": "^2.1.1"
+  }
 }
