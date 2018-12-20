@@ -3,6 +3,7 @@ import button from './src/button';
 import input from './src/input';
 import modal from './src/modal';
 import progress from './src/progress-bar';
+import url from './src/url';
 
 export default function(){
   QUnit.extend(QUnit.assert, {
@@ -12,7 +13,8 @@ export default function(){
     get modal(){
       return modal(...arguments)
     },
-    progress
+    progress,
+    url
   });
 
 }
