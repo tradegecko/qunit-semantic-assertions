@@ -1,9 +1,7 @@
 import { findControl } from 'semantic-dom-selectors';
 import buildAsserter from './assertions/index';
 
-export default function input(label) {
+export default function(label) {
   const control = findControl(label);
-  const asserter = buildAsserter(control, { label });
-
-  return asserter;
+  return buildAsserter(control, { label });
 }
