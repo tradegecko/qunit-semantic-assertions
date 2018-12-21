@@ -1,7 +1,7 @@
 import { findObject } from 'semantic-dom-selectors';
 import buildAsserter from './assertions/index';
 
-export default function progress(label) {
+export default function(label) {
   const control = findObject("[role='progressbar']", label);
   const asserter = buildAsserter(control, { label });
   asserter.valueNow = function (value) {

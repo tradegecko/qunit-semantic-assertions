@@ -1,14 +1,7 @@
 import { findObject } from 'semantic-dom-selectors';
 import buildAsserter from './assertions/index';
 
-QUnit.extend(QUnit.assert, {
-  // eslint-disable-next-line no-unused-vars
-  alert(label) {
-
-  },
-});
-
-export default function button(label) {
+export default function(label) {
   const control = findObject("[role='alert']", label, 'alert');
   return buildAsserter(control, { label });
 }
