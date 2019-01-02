@@ -14,7 +14,12 @@ export default function(){
     input,
     link,
     get modal(){
-      return modal(...arguments)
+      let func = modal;
+      Object.assign(
+        func,
+        modal()
+      );
+      return func;
     },
     progress
   });
