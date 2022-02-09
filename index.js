@@ -6,17 +6,19 @@ import link from './src/link';
 import modal from './src/modal';
 import progress from './src/progress-bar';
 
-export default function(){
-  QUnit.extend(QUnit.assert, {
+export default function() {
+  // `QUnit.extend` for IE support
+  let assign = Object.assign || QUnit.extend;
+
+  assign(QUnit.assert, {
     alert,
     button,
     definitionList,
     input,
     link,
-    get modal(){
+    get modal() {
       return modal(...arguments)
     },
     progress
   });
-
 }
